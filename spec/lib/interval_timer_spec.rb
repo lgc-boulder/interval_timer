@@ -12,7 +12,7 @@ describe IntervalTimer do
 
     expect(timer.report).to be_a(String)
 
-    header_size = 0
+    header_size = 1
 
     expect( count_lines(timer.report) ).to(
       eq( header_size + timer.check_ins.count )
