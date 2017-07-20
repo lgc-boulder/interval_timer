@@ -57,11 +57,11 @@ class IntervalTimer
 
   def report_line(x, last)
     if last
-      since_last = ( x[:created_at] - last[:created_at] ).round(3)
+      since_last = x[:created_at] - last[:created_at]
     else
-      since_last = ( x[:created_at] - @start_time )
+      since_last = x[:created_at] - @start_time
     end
 
-    "#{x[:created_at]} -- #{since_last} -- #{x[:message]}"
+    "#{x[:created_at]} -- #{ since_last.round(3) } -- #{x[:message]}"
   end
 end
