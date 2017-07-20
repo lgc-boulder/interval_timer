@@ -13,6 +13,6 @@ Gem::Specification.new do |s|
 
   s.files = [ 'lib/interval_timer.rb' ]
 
-  s.add_development_dependency 'rspec', '~> 0'
+  s.add_development_dependency 'rspec', '~> 3'
   s.add_development_dependency 'pry', '~> 0'
 end

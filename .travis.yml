@@ -1,0 +1,7 @@
+language: ruby
+
+script: rake --trace
+
+rvm:
+  - 2.2
+  - 2.3
