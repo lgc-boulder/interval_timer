@@ -12,13 +12,15 @@ describe IntervalTimer do
 
     expect(timer.report).to be_a(String)
 
-    header_size = 1
+    header_size = 3
 
     expect( count_lines(timer.report) ).to(
       eq( header_size + timer.check_ins.count )
     )
 
-    puts timer.report
+    expect( timer.report('with a header message' ) ).to(
+      include('with a header message')
+    )
   end
 
   def count_lines(string)

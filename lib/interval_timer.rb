@@ -18,9 +18,9 @@ class IntervalTimer
   end
   alias_method :mark, :check_in
 
-  def report
+  def report(message = nil)
     [
-      report_header.join("\n"),
+      report_header(message).join("\n"),
       report_body.join("\n")
     ].join("\n")
   end
@@ -35,8 +35,13 @@ class IntervalTimer
     { created_at: Time.now, message: message }
   end
 
-  def report_header
+  def report_header(message)
     output = []
+
+    output << ""
+
+    output <<
+      "IntervalTimer report" + ( message.nil? ? '' : ": #{ message }" )
 
     output << "start_time: #{@start_time}"
 
