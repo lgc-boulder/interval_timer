@@ -1,9 +1,12 @@
+require 'interval_timer/version'
+
 Gem::Specification.new do |s|
   s.name = 'interval_timer'
   s.summary = 'Code profiling tool that lets you track how long things take.'
   s.description = s.summary + ' Start a timer and check in from points in your code.  Prints a report of the time elapsed between those points in the code.'
 
-  s.version = '0.0.1'
+  s.version = IntervalTimer::Version
+
   s.date = '2017-07-20'
 
   s.authors = [ 'Luke Griffiths' ]
